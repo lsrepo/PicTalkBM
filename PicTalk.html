@@ -8,14 +8,19 @@
       <h1>Todo List</h1>
     </header>
 
+  </div>
 
-      {{#each images}}
-        {{> image}}
-      {{/each}}
-
+  <div class="ui two column grid ">
+    {{#each images}}
+      {{> image}}
+    {{/each}}
   </div>
 </body>
 
 <template name="image">
-  <p>{{English}}</p>
+  <div class="column">
+    <img alt="" class="ui fluid image" src="{{File}}"/>
+    <p class="belowText">{{English}}</p>
+  </div>
+
 </template>
